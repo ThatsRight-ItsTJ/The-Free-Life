@@ -1,10 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
+  output: 'export',          // Enables static export
   images: {
-    unoptimized: true
+    unoptimized: true       // Required for static export
   },
-  trailingSlash: true
+  trailingSlash: true       // Adds trailing slashes to URLs
 }
-
 module.exports = nextConfig
