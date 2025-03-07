@@ -34,8 +34,26 @@ export default function Sidebar({ pages }: SidebarProps) {
     ? pages.filter(page => page.title.toLowerCase().includes(searchQuery.toLowerCase()))
     : [];
 
-  // Define category order
-  const categoryOrder = ['Main', 'Navigation', 'Guide'];
+  // Define category order and descriptions
+  const categoryOrder = ['Main', 'Website Guides', 'Navigation'];
+  const categoryDescriptions = {
+    'Main': 'Core documentation pages about free resources.',
+    'Website Guides': 'Articles that provide step-by-step instructions and detailed explanations.',
+    'Navigation': 'Pages that help you find content across the wiki.'
+  };
+
+  // Define main category pages order
+  const mainPagesOrder = [
+    'Free Money',
+    'Free Food/Meals',
+    'Free Clothing',
+    'Free Services',
+    'Free Financial Services',
+    'Free Lodging',
+    'Free Transport',
+    'Free Furniture',
+    'Free Car'
+  ];
 
   return (
     <div className="w-[176px] bg-[#f6f6f6] shrink-0">
@@ -96,11 +114,26 @@ export default function Sidebar({ pages }: SidebarProps) {
         <nav className="text-sm">
           {categoryOrder.map(category => {
             if (!categoryGroups[category]) return null;
+            
+            let pagesToDisplay = categoryGroups[category];
+            
+            // For Main category, sort according to mainPagesOrder
+            if (category === 'Main') {
+              pagesToDisplay = mainPagesOrder
+                .map(title => pagesToDisplay.find(page => page.title === title))
+                .filter(page => page !== undefined);
+            }
+
             return (
-              <div key={category} className="mb-4">
-                <h3 className="font-bold text-[#54595d] mb-1">{category}</h3>
+              <div key={category} className="mb-6">
+                <h3 className="font-bold text-[#54595d] mb-2">{category}</h3>
+                {categoryDescriptions[category] && (
+                  <p className="text-[#54595d] text-xs mb-2 italic">
+                    {categoryDescriptions[category]}
+                  </p>
+                )}
                 <ul className="space-y-1">
-                  {categoryGroups[category].map((page, index) => (
+                  {pagesToDisplay.map((page, index) => (
                     <li key={index}>
                       <Link
                         href={`/${page.slug}`}
