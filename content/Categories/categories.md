@@ -5,8 +5,6 @@ category: Navigation
 
 # Categories
 
-# Categories
-
 An index of all general categories of free stuff and their pages.
 
 ## Main
