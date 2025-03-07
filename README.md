@@ -5,7 +5,7 @@ category: Main
 
 # Welcome to The Free Life
 
-A static website alternative to Mediawiki with fast search and easy navigation.
+Spiritual successor of freekipedia.net. Collective wiki for information on a life without or with less money. Fully public and open to edit on Github. Backend forked from GitWiki. Free domain name provided by us.kg. Hosted and protected for free by Cloudflare.
 
 ## Quick Links
 
