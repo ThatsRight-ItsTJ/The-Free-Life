@@ -5,9 +5,24 @@ category: Navigation
 
 # Categories
 
-An alphabetical index of all categories and their pages.
+# Categories
 
-## Guide
+An index of all general categories of free stuff and their pages.
+
+## Main
+
+ - [Free Money]
+ - [Free Food/Meals]
+ - [Free Clothing]
+ - [Free Services]
+ - [Free Financial Services]
+ - [Free Lodging]
+ - [Free Transport]
+ - [Free Furniture]
+ - [Free Car]
+ - 
+
+## Website Guides
 
 Articles that provide step-by-step instructions and detailed explanations.
 
@@ -25,6 +40,7 @@ Core documentation pages.
 
 Pages that help you find content across the wiki.
 
+- [Home](/)
 - [Categories](/categories) (this page)
 - [Contents](/contents)
 - [Tutorials](/tutorials)
