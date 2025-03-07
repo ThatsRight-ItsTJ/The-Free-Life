@@ -3,7 +3,7 @@ title: Home
 category: Main
 ---
 
-# Welcome to gitWiki
+# Welcome to The Free Life
 
 A static website alternative to Mediawiki with fast search and easy navigation.
 
